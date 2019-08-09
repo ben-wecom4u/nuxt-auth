@@ -19,7 +19,13 @@ module.exports = {
   loading: { color: '#3B8070' },
 
   modules: [
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth',
+  ],
+
+  plugins: [
+    '~plugins/vue-validate.js',
   ],
 
   css: [
@@ -31,6 +37,23 @@ module.exports = {
     bootstrapVueCSS: false // or `bvCSS`
   },
 
+  axios: {
+    baseURL: 'http://localhost:8000/api',
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {url: 'login', method: 'post', propertyName: 'access_token'},
+          user: {url: 'user', method: 'get', propertyName: 'user'},
+          logout: false
+        },
+        tokenRequired: true,
+        tokenType: 'Bearer'
+      }
+    }
+  },
 
   /*
   ** Build configuration

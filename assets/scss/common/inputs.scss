@@ -1,0 +1,209 @@
+.input-material {
+  margin-bottom: 30px;
+  width: 100%;
+  .bloc-input {
+    position: relative;
+
+    .input {
+      font-size:16px;
+      padding:10px 10px 10px 12px;
+      display:block;
+      width:100%;
+      border:1px solid #757575;
+      border-radius: 4px;
+
+
+    }
+    .input:focus, .input.active {
+      outline:none;
+      border: 2px solid #5264AE;
+    }
+
+
+    .label 	{
+      color:#999;
+      font-size:16px;
+      font-weight:normal;
+      position:absolute;
+      pointer-events:none;
+      left:15px;
+      top:10px;
+      transition:0.2s ease all;
+      -moz-transition:0.2s ease all;
+      -webkit-transition:0.2s ease all;
+    }
+
+    /* active state */
+    .input:focus ~ .label, .input.active ~ .label	{
+      top:-11px;
+      left: 10px;
+      background: white;
+      padding-left: 4px;
+      padding-right: 4px;
+      font-size:14px;
+      color:#5264AE;
+    }
+  }
+
+  &.required .input:focus ~.label:after, &.require .input.active ~ .label:after {
+    content: '*';
+    padding-left: 3px;
+  }
+
+  .bloc-input-file {
+    font-size:16px;
+    width:100%;
+    border:1px solid #757575;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 45px;
+    .input {
+      display: none;
+    }
+
+    .labelUpload {
+      cursor: pointer;
+      padding:10px 10px 10px 12px;
+      border-left: 1px solid #757575;
+      background: #A1A1A1;
+      color: black;
+    }
+
+    .path {
+      padding-left: 15px;
+      cursor: pointer;
+      white-space: nowrap;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .reset {
+      padding-right: 15px;
+      cursor: pointer;
+    }
+    .label, .labelUpload {
+      margin-bottom: 0;
+    }
+
+    .label 	{
+      color:#999;
+      font-size:16px;
+      font-weight:normal;
+      position:absolute;
+      pointer-events:none;
+      left:15px;
+      top:10px;
+      transition:0.2s ease all;
+      -moz-transition:0.2s ease all;
+      -webkit-transition:0.2s ease all;
+    }
+
+    /* active state */
+    .label.focus	{
+      top:-11px;
+      left: 10px;
+      background: white;
+      padding-left: 4px;
+      padding-right: 4px;
+      font-size:14px;
+      color:#5264AE;
+    }
+
+    .bloc-actions {
+      display: flex;
+      align-items: center;
+    }
+
+  }
+  .preview {
+    margin-top: 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
+
+.parent-multiselect {
+  margin-bottom: 30px;
+
+  .multiselect {
+    min-height: 47px;
+
+    border:1px solid #757575;
+    border-radius: 4px;
+
+    .multiselect__tags {
+      min-height: 47px;
+      padding: 16px 40px 0 8px;
+    }
+
+    .multiselect__input {
+      margin-bottom: 0;
+    }
+    &.multiselect--active, &.hasMinOneValue {
+      .material {
+        top:-11px;
+        left: 10px;
+        background: white;
+        padding-left: 4px;
+        padding-right: 4px;
+        font-size:14px;
+        color:#5264AE;
+      }
+    }
+    .material {
+      position: absolute;
+      top: 11px;
+      left: 9px;
+      transition:0.2s ease all;
+      -moz-transition:0.2s ease all;
+      -webkit-transition:0.2s ease all;
+      color: #999;
+    }
+  }
+  .multiselect__tags {
+    font-size: 16px !important;
+  }
+}
+
+.input-radio {
+  font-size:16px;
+  padding:10px 10px 10px 12px;
+  display:block;
+  width:100%;
+  border:1px solid #757575;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 20px;
+  .bloc-input {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    .label {
+      position: absolute;
+      top:-11px;
+      left: 10px;
+      background: white;
+      padding-left: 4px;
+      padding-right: 4px;
+      font-size:14px;
+      color:#5264AE;
+    }
+
+    .input-child.active {
+      border: 2px solid black;
+    }
+    .input-child input {
+      display: none;
+    }
+  }
+}
+
+
